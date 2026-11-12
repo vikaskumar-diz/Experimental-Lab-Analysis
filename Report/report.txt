@@ -1,0 +1,110 @@
+1. Executive Summary
+
+ExperimentLab is an end-to-end data analytics project designed to evaluate the effectiveness of digital advertising.
+
+The project analyzes experimental data to determine whether users assigned to an advertising treatment show higher conversion rates than users in a control group.
+
+The workflow covers large-scale data processing, SQL analysis, statistical evaluation, and interactive Power BI dashboards.
+
+2. Business Problem
+
+Businesses invest in digital advertising but need evidence that advertising actually improves conversions.
+
+This project investigates three questions:
+
+- Does advertising improve conversion rates?
+- Is the observed improvement statistically significant?
+- How can experimental data support better advertising decisions?
+
+3. Dataset Overview
+
+Detail| Information
+Dataset| Criteo Uplift Prediction
+Original records| Approximately 13.98 million
+Cleaned records| 12.72 million
+Features| 12 anonymized features
+Key variables| Treatment, conversion, visit, exposure
+
+Dataset source: Criteo AI Lab — https://ailab.criteo.com/
+
+4. Tools & Technologies
+
+- Python: Data processing and preparation
+- DuckDB: Efficient processing of large CSV files
+- SQL Server: Structured storage and analytical queries
+- Power BI: Interactive dashboards and visual reporting
+- Jupyter Notebook: Data exploration and analysis
+
+5. Project Workflow
+
+Raw Data → Data Cleaning → SQL Server → SQL Analysis → Power BI Dashboards
+
+1. Acquired the original dataset.
+2. Cleaned and prepared large data using Python and DuckDB.
+3. Loaded the prepared data into SQL Server.
+4. Created SQL views for experiment KPIs, statistical analysis, and feature analysis.
+5. Connected Power BI to the analytical data.
+6. Developed dashboards to communicate business findings.
+
+6. Key Results
+
+Performance Metric| Result
+Treatment Conversion Rate| 0.3440%
+Control Conversion Rate| 0.1984%
+Absolute Lift| +0.1456 percentage points
+Relative Lift| +73.38%
+Balanced Features| 12 / 12
+
+The treatment group recorded a higher conversion rate than the control group. All 12 measured features were within the selected SMD balance threshold of 0.10.
+
+These results describe the prepared analytical sample. Statistical significance and causal interpretation depend on the experiment design and assumptions.
+
+7. Dashboard Development
+
+The Power BI report is organized into four analytical sections:
+
+Dashboard 1 — Executive Overview
+
+- Overall experiment performance
+- Conversion rate comparison
+- Absolute and relative lift
+- Estimated incremental conversions
+
+Dashboard 2 — Advertising Effectiveness
+
+- Treatment exposure
+- Visit behaviour
+- Exposure and visit comparisons
+
+Dashboard 3 — Statistical Evidence
+
+- Statistical significance
+- Z-statistic and p-value threshold
+- Confidence interval
+- Feature balance assessment
+
+Dashboard 4 — Uplift & Targeting
+
+- Planned audience-level treatment-effect analysis
+- Uplift modelling and targeting evaluation
+
+8. Project Limitations
+
+- No customer identifiers for individual-level tracking.
+- No timestamps for time-based analysis.
+- No advertising cost or revenue fields.
+- CPA, ROAS, and profitability cannot be calculated from this dataset.
+- Uplift modelling and its evaluation are not yet complete.
+
+9. Conclusion
+
+ExperimentLab demonstrates how a large experimental dataset can be transformed into structured analytical information and business-focused dashboards.
+
+The initial results show a higher conversion rate in the treatment group. The project also evaluates statistical evidence and feature balance to support more informed interpretation.
+
+The project demonstrates practical skills in large-scale data processing, SQL analytics, statistical evaluation, and business intelligence reporting.
+
+---
+
+Project: ExperimentLab
+Category: Data Analytics | Experimentation |
